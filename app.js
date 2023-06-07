@@ -13,7 +13,7 @@ const PSAXO = 6000;
 let iniciar = "";
 let continuar;
 let total = 0;
-let num1;
+let cantidad;
 
 /// funcion de calculadora
 
@@ -26,20 +26,20 @@ function carrito() {
         alert ("por favor elija un producto valido");
         carrito ();
     } else {
-        num1 = parseFloat(prompt("indique la cantidad deseada:"));
+        cantidad = parseFloat(prompt("indique la cantidad deseada:"));
 
         switch (producto) {
             case GUITARRA:
-                total = total + (PGUITARRA * num1);
+                total = total + (PGUITARRA * cantidad);
                 break;
             case BATERIA:
-                total = total + (PBATERIA * num1);
+                total = total + (PBATERIA * cantidad);
                 break;
             case BAJO:
-                total = total + (PBAJO * num1);
+                total = total + (PBAJO * cantidad);
                 break;
             case SAXO:
-                total = total + (PSAXO * num1);
+                total = total + (PSAXO * cantidad);
                 break;
             default:
                 total = 0;
@@ -59,8 +59,8 @@ if (iniciar == "si") {
         continuar = prompt("desea agregar otro producto? si/no");
     } while (continuar == "si");
     if (continuar !== "si") {
-        alert("muchas gracias! sus productos fueron agregados al carrito con exito!");
+        alert("muchas gracias! sus productos fueron agregados al carrito con exito! Tiene un total de: $" + total);
     }
 } else {
-    alert("Gracias por su interes en nuestra empresa!");
+    alert("Vuelva pronto!");
 }
