@@ -30,7 +30,7 @@ function carrito() {
 
         switch (producto) {
             case GUITARRA:
-                total = total + (PGUITARRA * cantidad);
+                total = total + (PGUITARRA*cantidad);
                 break;
             case BATERIA:
                 total = total + (PBATERIA * cantidad);
@@ -42,7 +42,7 @@ function carrito() {
                 total = total + (PSAXO * cantidad);
                 break;
             default:
-                total = 0;
+                alert ("por favor, indique un numero")
                 break;
         }
         alert("su total es de: $" + total);
